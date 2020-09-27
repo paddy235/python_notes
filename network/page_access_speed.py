@@ -1,14 +1,14 @@
 """
-需求分析：与LDAP服务器建立连接，查询公司所有的员工信息和部门信息，并将结果保存在2个json文件中。
-运行环境：python3 + Windows或者Linux
-依赖库第三方库： ldap3
-GitHub链接：https://github.com/dandh811/python_notes/blob/master/networkServices/LDAP/ldap_tool.py
+需求分析：业务部门反馈某个站点有时访问比较慢，因此写个简单脚本监测一段时间，监测结果记录在日志文件中。
+运行环境：python3
+依赖库第三方库： request
+GitHub链接：https://github.com/dandh811/python_notes/blob/master/network/page_access_speed.py
 """
 import requests
 import logging
 import time
 
-url = 'https://songjing.vip'
+url = 'https://www.xxx.com'
 logging.basicConfig(level=logging.INFO,
                     filename='access.log',
                     filemode='a',
