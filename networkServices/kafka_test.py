@@ -58,7 +58,8 @@ for message in consumer:
         print("Failed to report data:")
         print(e)
 
-def test(): #<img src=1 onerror=alert(9)>
+
+def test():
     pass
 
 
