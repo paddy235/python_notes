@@ -1,19 +1,19 @@
 """
-需求分析：与LDAP服务器建立连接，并且查询公司所有的员工信息和部门信息
+需求分析：与LDAP服务器建立连接，查询公司所有的员工信息和部门信息，并将结果保存在2个json文件中。
 运行环境：python3 + Windows或者Linux
 依赖库第三方库： ldap3
-GitHub链接：
+GitHub链接：https://github.com/dandh811/python_notes/blob/master/networkServices/LDAP/ldap_tool.py
 """
 from ldap3 import Server, Connection, ALL, NTLM, ALL_ATTRIBUTES, LEVEL, SUBTREE, ServerPool
 import time
 import json
 
 
-AUTH_LDAP_SERVER_URI = ['ldap://bitmain-inc.com:389']
-AUTH_LDAP_BIND_DM = '@bitmain-inc.com'
-AUTH_LDAP_SEARCH_BASE = "dc=bitmain-inc,dc=com"
-username = 'jian'
-password = ''
+AUTH_LDAP_SERVER_URI = ['ldap://xxx.com:389']
+AUTH_LDAP_BIND_DM = 'xxx.com'
+AUTH_LDAP_SEARCH_BASE = "dc=xxx,dc=com"
+username = 'xxx'
+password = 'xxx'
 
 
 class Ldap3Util(object):
