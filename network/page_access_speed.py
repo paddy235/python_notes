@@ -4,16 +4,13 @@
 依赖库第三方库： request
 GitHub链接：https://github.com/dandh811/python_notes/blob/master/network/page_access_speed.py
 """
+
 import requests
 import logging
 import time
 
-url = 'https://www.xxx.com'
-logging.basicConfig(level=logging.INFO,
-                    filename='access.log',
-                    filemode='a',
-                    )
-
+url = 'https://www.xxx.com'  # 监测域名
+logging.basicConfig(level=logging.INFO, filename='access.log', filemode='a')  # 配置日志
 
 while True:
     r = requests.get(url)
