@@ -44,7 +44,6 @@ class WeChatPub:
                 "title": title,
                 "description": content,
                 "url": url,
-                # "btntxt": "更多"
             },
             "safe": 0
         }
