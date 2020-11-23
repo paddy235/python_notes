@@ -4,9 +4,10 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 
 def start(i):
-    ips = ['10.192.28.2', '172.16.1.135', '10.193.210.100', '10.40.24.1', '10.40.25.2', '10.40.0.31', '10.40.3.32',
+    ips = ['10.211.1.11']
+    ips2 = ['10.192.28.2', '172.16.1.135', '10.193.210.100', '10.40.24.1', '10.40.25.2', '10.40.0.31', '10.40.3.32',
            '10.211.0.126', '10.211.0.11', '10.211.1.11']
-    for ip in ips:
+    for ip in ips2:
         try:
             # print(ip, i)
             sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -15,7 +16,7 @@ def start(i):
             print(ip, i, " port is ok")
             sk.close()
         except Exception as e:
-            # print(e)
+            # print(i, 'is closed')
             pass
 try:
 
@@ -24,7 +25,6 @@ try:
 
     pool.close()
     pool.join()
+    print('down')
 except Exception as e:
     print(e)
-
-
